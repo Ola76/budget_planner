@@ -1,0 +1,118 @@
+.navbar ul {
+    list-style-type: none;
+    background-color: #0e0241;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #007bff;
+}
+
+.navbar li {
+    float: right;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0241;
+    color: whitesmoke;
+}
+
+.container {
+    width: 400px;
+    /* Increase or decrease width as needed */
+    margin: 100px auto;
+    /* Adjust margin as needed for centering */
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    animation: borderAnimation 4s infinite alternate;
+}
+
+.todo-container {
+    width: 450px;
+    /* Increase or decrease width as needed */
+    margin: 100px auto;
+    /* Adjust margin as needed for centering */
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    animation: borderAnimation 4s infinite alternate;
+}
+
+h3 {
+    text-align: center;
+    color: #4797c3;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    /* Adjust width to account for padding */
+    padding: 10px;
+    margin: 10px 0;
+    /* Add margin between input boxes */
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    /* Set background color to white */
+    color: #333;
+    /* Set text color to black or any other desired color */
+    cursor: pointer;
+    box-sizing: border-box;
+    /* Include padding in the element's total width */
+}
+
+input[type="submit"] {
+    width: calc(100% - 20px);
+    /* Adjust width to account for padding */
+    padding: 10px;
+    margin: 10px 0;
+    /* Add margin between input boxes */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    /* Set background color to blue */
+    color: #fff;
+    /* Set text color to white */
+    cursor: pointer;
+    box-sizing: border-box;
+    /* Include padding in the element's total width */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="submit"]:focus {
+    outline: none;
+    /* Remove default focus outline */
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+
+    50% {
+        border-color: blue;
+    }
+
+    100% {
+        border-color: red;
+    }
+}

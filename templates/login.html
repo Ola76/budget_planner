@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block title %}Budget manager{% endblock title %}
+
+{% block content %} 
+<div class="container">
+    <h3>Welcome to the Budget manager</h3>
+    <p>Master your finances with our intuitive Budget Manager. Effortlessly track expenses and manage your budget with ease, simplifying your financial planning in just a few clicks.</p>    <form method="post" action="{{ url_for('login') }}">
+        <input type="text" name="username" placeholder="username">
+        <input type="text" name="password" placeholder="*********">
+        <input type="submit" value="Login" class="btn">
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endwith %}
+    
+</div>
+{%endblock %}

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "egg",
+        "category": "foood",
+        "price": "23",
+        "timestamp": "2024-03-27 23:33:36"
+    },
+    {
+        "name": "Rent",
+        "category": "Housing",
+        "price": "1200",
+        "timestamp": "2024-03-28 12:46:46"
+    },
+    {
+        "name": "Phone bills",
+        "category": "Utilities",
+        "price": "150",
+        "timestamp": "2024-03-28 12:47:08"
+    }
+]

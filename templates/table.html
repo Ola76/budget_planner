@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Budget Manager{% endblock title %}
+
+{% block content %}
+<nav class="navbar">
+    <ul>
+        <li><a href="/table">Table</a></li>
+        <li><a href="/analytics">Analytics</a></li>
+    </ul>
+</nav>
+<div class="todo-container">
+    <h3>Budget Items</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="todo-list">
+            {% for todo in todos %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ todo.name }}</td>
+                <td>{{ todo.category }}</td>
+                <td>{{ todo.price }}</td>
+                <td>{{ todo.timestamp }}</td>
+                <td><button class="delete-btn" data-id="{{ loop.index }}">Delete</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- Form for adding a new budget item -->
+    <form id="add-todo-form">
+        <input type="text" name="name" placeholder="Name" id="todo-name" style="width: 150px;"> 
+        <input type="text" name="category" placeholder="Category" id="todo-category" style="width: 150px;"> 
+        <input type="number" name="price" placeholder="Price" id="todo-price" style="width: 150px;"> 
+        <button type="button" id="add-btn" class="add-add">Add</button> 
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
