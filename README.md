@@ -1,9 +1,5 @@
 # Budget Planner
 
-![Login Screen](login_screen.png)
-
-![Table View](table_view.png)
-
 ## Overview
 The Budget Planner is a web application designed to help users manage their finances effectively. It provides features for logging in, viewing a budget table, and under construction analytics functionality for deeper insights.
 
